@@ -17,6 +17,7 @@ spec:
         vault.hashicorp.com/agent-inject: 'true'
         vault.hashicorp.com/role: 'go-app-role'
         vault.hashicorp.com/agent-inject-secret-go-database-config.txt: 'internal/data/go-database-config/credentials/'
+    serviceAccountName: go-app-sa
     spec: 
       containers: 
       - name: go-con 
