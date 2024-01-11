@@ -40,9 +40,10 @@ spec:
             value: https://127.0.0.1:8200 
           - name: VAULT_NAMESPACE 
             value: vault
+          - name: BASH_ENV 
+            value: /vault/secrets/config
         ports: 
         - containerPort: 8080
-        args: ['sh', 'source /vault/secrets/config && /docker-gs-ping']
 ---
 
 apiVersion: v1 
