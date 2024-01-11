@@ -28,10 +28,6 @@ spec:
       containers: 
       - name: go-con 
         image: pranay1717/go-mysql-connect:latest 
-        resources: 
-          requests: 
-            cpu: 200m 
-            memory: 200Mi
         envFrom:
           - configMapRef:
               name: go-config
