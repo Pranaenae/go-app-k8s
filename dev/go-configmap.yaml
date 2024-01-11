@@ -4,3 +4,6 @@ metadata:
   name: go-config 
 data: 
   DBHOST: "192.168.10.80"
+  DBNAME: "test"
+  DBUSER: "go"
+  DBPASS: "go@123"
