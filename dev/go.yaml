@@ -17,7 +17,6 @@ spec:
         vault.hashicorp.com/agent-inject: 'true'
         vault.hashicorp.com/role: 'go-app-role'
         vault.hashicorp.com/agent-inject-secret-go-database-config.txt: 'internal/data/go-database-config/credentials/'
-    
     spec: 
       serviceAccountName: go-app-sa
       containers: 
@@ -27,6 +26,14 @@ spec:
           requests: 
             cpu: 200m 
             memory: 200Mi
+        envFrom:
+          - configMapRef:
+              name: go-config
+        env: 
+          - name: VAULT_ADDR 
+            value: https://127.0.0.1:8200 
+          - name: VAULT_NAMESPACE 
+            value: vault
         ports: 
         - containerPort: 8080
 ---

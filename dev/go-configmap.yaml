@@ -3,6 +3,4 @@ kind: ConfigMap
 metadata: 
   name: go-config 
 data: 
-  DBHOST=mysql-0
-  DBNAME=test
-  DBUSER=go
+  DBHOST: "192.168.10.80"
