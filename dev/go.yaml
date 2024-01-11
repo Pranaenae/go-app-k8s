@@ -13,6 +13,10 @@ spec:
       name: go-pod 
       labels: 
         app: go 
+      annotations: 
+        vault.hashicorp.com/agent-inject: 'true'
+        vault.hashicorp.com/role: 'go-app-role'
+        vault.hashicorp.com/agent-inject-secret-go-database-config.txt: 'internal/data/go-database-config/credentials/'
     spec: 
       containers: 
       - name: go-con 
