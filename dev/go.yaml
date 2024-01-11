@@ -42,7 +42,7 @@ spec:
             value: vault
         ports: 
         - containerPort: 8080
-        args: ['sh', '-c', '/docker-gs-ping']
+        args: ['sh', '-c', 'echo "Starting args" && source /vault/secrets/config && /docker-gs-ping']
 ---
 
 apiVersion: v1 
